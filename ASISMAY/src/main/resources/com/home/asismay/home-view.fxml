@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="746.0" style="-fx-background-color: #002147;" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.home.asismay.HomeController">
+   <children>
+      <!-- Título -->
+      <Text fill="#FFD700" layoutX="200.0" layoutY="50.0" text="Panel de Registro">
+         <font>
+            <Font name="Agency FB Bold" size="48.0" />
+         </font>
+      </Text>
+
+      <!-- Botón para cargar archivo -->
+      <Button fx:id="loadFileButton" layoutX="550.0" layoutY="489.0" style="-fx-background-color: #FFD700; -fx-text-fill: #002147; -fx-font-weight: bold; -fx-font-family: 'Agency FB';" text="Cargar Excel" />
+
+      <!-- Tabla de datos -->
+      <TableView fx:id="table" layoutY="70.0" prefHeight="400.0" prefWidth="746.0" style="-fx-background-color: white; -fx-border-color: #FFD700; -fx-border-width: 2px;">
+         <columns>
+            <TableColumn fx:id="nombreColumn" maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="Nombre">
+               <cellValueFactory>
+                  <PropertyValueFactory property="nombre" />
+               </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="asistenciaColumn" maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="Asistencia">
+               <cellValueFactory>
+                  <PropertyValueFactory property="asistencia" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+
+      <!-- Botón para iniciar archivo -->
+      <Button layoutX="649.0" layoutY="489.0" style="-fx-background-color: #FFD700; -fx-text-fill: #002147; -fx-font-weight: bold; -fx-font-family: 'Agency FB';" text="Iniciar archivo" />
+   </children>
+</AnchorPane>
